@@ -1,30 +1,22 @@
 {
   "name": "oogy-cone",
   "version": "1.0.0",
-  "description": " 🍦 vanilla js static pwa generator, built in ts for oogy: can you help (~24kB)",
-  "type": "module",
+  "description": "A lightweight JS module for rendering cone-shaped visualizations.",
   "main": "dist/Cone.js",
-  "scripts": {
-    "start": "tsc",
-    "release": "cat dist/Cone.js | tr -s '[:blank:]' | tr -d '\n' > dist/Cone.min.js",
-    "example": "npm start; cd example && npm start",
-    "example-html": "npm start; npm run release; python3 -m http.server 4000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/insanj/cone.git"
-  },
-  "author": "insanj",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/insanj/cone/issues"
-  },
-  "homepage": "https://github.com/insanj/cone#readme",
-  "devDependencies": {
-    "typescript": "^4.7.0-dev.20220401"
-  },
+  "types": "dist/Cone.d.ts",
   "files": [
-    "dist/",
-    "src/"
-  ]
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.5",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "libphonenumber-js": "^1.12.8",
+    "react-icons": "^5.5.0"
+  }
 }
